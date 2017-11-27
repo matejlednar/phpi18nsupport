@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <?
 include_once './php/classes/I18nSupport.php';
 $app = new App();
