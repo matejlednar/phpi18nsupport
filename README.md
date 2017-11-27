@@ -41,5 +41,7 @@ Sample:
 ## Language detection
 
 Auto detection or query string detection based on lang parameter
+```
 index.php?lang=en
+```
 
