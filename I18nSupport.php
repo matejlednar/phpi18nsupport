@@ -1,4 +1,5 @@
 <?
+
 /**
  * PHP i18n Support - JSON data
  * Based on sections (HTML semantic sections / categories), keys,
@@ -9,8 +10,12 @@
 class App {
 
     private $translation = "";
-    private $lang = "";
-    private $translationPath = "translation/i18n.json";
+    private $lang = "en";
+    private $translationPath = "translation/i18n.json";  
+    private $languages = [
+        'en',
+        'sk',
+        'de'];
 
     function __construct() {
 
@@ -29,10 +34,8 @@ class App {
             $lang = substr(filter_input(INPUT_SERVER, 'HTTP_ACCEPT_LANGUAGE'), 0, 2);
         }
 
-        $supportedLanguages = ['en', 'sk', 'de'];
-
-        if (!in_array($lang, $supportedLanguages)) {
-            $lang = 'en';
+        if (!in_array($lang, $this->languages)) {
+            $lang = $this->$lang;
         }
 
         $this->lang = $lang;
@@ -44,7 +47,7 @@ class App {
      * @param String $path
      */
     public function loadTranslation($path) {
-      
+
         // Read JSON file
         $json = file_get_contents($path);
 
@@ -59,7 +62,7 @@ class App {
      * @return String
      */
     public function getText($section, $key) {
-      
+
         $lang = $this->lang;
         $translation = $this->translation[$section];
         $translation = $translation[$key];
@@ -75,8 +78,36 @@ class App {
      * @param String $key
      */
     public function i18n($section, $key) {
-     
+
         echo $this->getText($section, $key);
     }
-}
 
+    public function setDefaultLanguage($lang) {
+        
+        $this->lang = $lang;
+    }
+
+    public function getDefaultLanguage() {
+        
+        return $this->lang;
+    }
+
+    public function setSupportedLanguages($languages) {
+        
+        $this->languages = $languages;
+    }
+
+    public function getSupportedLanguages() {
+        
+        return $this->languages;
+    }
+
+    public function isSupportedLanguage($lang) {
+        
+        if (in_array($lang, $this->languages)) {
+            return true;
+        }
+        return false;
+    }
+
+}

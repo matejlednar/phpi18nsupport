@@ -50,7 +50,7 @@ index.php?lang=en
 ```
 setDefaultLanguage($lang);
 getDefaultLanguage();
-setSupportedLanguages($languages);
+setSupportedLanguages([$languages]);
 getSupportedLanguages();
 isSupportedLanguage($lang);
 ```
