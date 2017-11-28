@@ -102,7 +102,7 @@ class App {
         return $this->languages;
     }
 
-    public function isSupportedLanguage($lang) {
+    public function isSupported($lang) {
         
         if (in_array($lang, $this->languages)) {
             return true;

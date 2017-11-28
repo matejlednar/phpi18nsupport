@@ -69,8 +69,8 @@ $app = new App();
         <?
         echo $app->getDefaultLanguage() . "<br>";
         echo implode(" ", $app->getSupportedLanguages()) . "<br>";
-        echo ($app->isSupportedLanguage("sk") ? "true" : "false") . "<br>";
-        echo ($app->isSupportedLanguage("cz") ? "true" : "false") . "<br>";
+        echo ($app->isSupported("sk") ? "true" : "false") . "<br>";
+        echo ($app->isSupported("cz") ? "true" : "false") . "<br>";
 
         echo "-----------------<br>";
 
@@ -81,8 +81,8 @@ $app = new App();
             "sk"]);
         echo $app->getDefaultLanguage() . "<br>";
         echo implode(" ", $app->getSupportedLanguages()) . "<br>";
-        echo ($app->isSupportedLanguage("sk") ? "true" : "false") . "<br>";
-        echo ($app->isSupportedLanguage("cz") ? "true" : "false") . "<br>";
+        echo ($app->isSupported("sk") ? "true" : "false") . "<br>";
+        echo ($app->isSupported("cz") ? "true" : "false") . "<br>";
         ?>
 
     </body>

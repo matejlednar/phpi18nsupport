@@ -52,5 +52,5 @@ setDefaultLanguage($lang);
 getDefaultLanguage();
 setSupportedLanguages([$languages]);
 getSupportedLanguages();
-isSupportedLanguage($lang);
+isSupported($lang);
 ```
