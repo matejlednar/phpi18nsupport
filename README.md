@@ -45,3 +45,12 @@ Auto detection or query string detection based on lang parameter
 index.php?lang=en
 ```
 
+## Language utils
+
+```
+setDefaultLanguage($lang);
+getDefaultLanguage();
+setSupportedLanguages($languages);
+getSupportedLanguages();
+isSupportedLanguage($lang);
+```

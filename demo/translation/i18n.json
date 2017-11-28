@@ -1,6 +1,6 @@
 {
     "metadata" : {
-        
+
         "title" : [
             {
                 "en" : "PHP i18n support demo",
@@ -37,6 +37,27 @@
                 "en" : "Services",
                 "sk" : "Služby",
                 "de" : "Service"
+            }
+        ],
+        "en" : [
+            {
+                "en" : "EN",
+                "sk" : "EN",
+                "de" : "EN"
+            }
+        ],
+        "sk" : [
+            {
+                "en" : "SK",
+                "sk" : "SK",
+                "de" : "SK"
+            }
+        ],
+        "de" : [
+            {
+                "en" : "DE",
+                "sk" : "DE",
+                "de" : "DE"
             }
         ]
     }
