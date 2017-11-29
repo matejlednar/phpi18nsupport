@@ -65,25 +65,27 @@ $app = new App();
                 </div>
             </nav>
         </div>
+        <div class="container">
+            <h2>Tests</h2>
+            <?
+            echo $app->getDefaultLanguage() . "<br>";
+            echo implode(" ", $app->getSupportedLanguages()) . "<br>";
+            echo ($app->isSupported("sk") ? "true" : "false") . "<br>";
+            echo ($app->isSupported("cz") ? "true" : "false") . "<br>";
 
-        <?
-        echo $app->getDefaultLanguage() . "<br>";
-        echo implode(" ", $app->getSupportedLanguages()) . "<br>";
-        echo ($app->isSupported("sk") ? "true" : "false") . "<br>";
-        echo ($app->isSupported("cz") ? "true" : "false") . "<br>";
+            echo "-----------------<br>";
 
-        echo "-----------------<br>";
+            $app->setDefaultLanguage("sk");
+            $app->setSupportedLanguages([
+                "en",
+                "cz",
+                "sk"]);
+            echo $app->getDefaultLanguage() . "<br>";
+            echo implode(" ", $app->getSupportedLanguages()) . "<br>";
+            echo ($app->isSupported("sk") ? "true" : "false") . "<br>";
+            echo ($app->isSupported("cz") ? "true" : "false") . "<br>";
+            ?>
 
-        $app->setDefaultLanguage("sk");
-        $app->setSupportedLanguages([
-            "en",
-            "cz",
-            "sk"]);
-        echo $app->getDefaultLanguage() . "<br>";
-        echo implode(" ", $app->getSupportedLanguages()) . "<br>";
-        echo ($app->isSupported("sk") ? "true" : "false") . "<br>";
-        echo ($app->isSupported("cz") ? "true" : "false") . "<br>";
-        ?>
-
+        </div>
     </body>
 </html>
