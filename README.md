@@ -17,15 +17,11 @@ $app = new App($pathToTranslation);
 $app = new App();
 $app ->loadTranslation("i18n/i18n.json");
 
-
 // show translated text
 $app->showText("sectionName", "keyName");
 
 // returns translated text
 $app->getText("sectionName", "keyName");
-
-
-
 
 ?>
 ```
