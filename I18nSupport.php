@@ -2,8 +2,11 @@
 
 /**
  * PHP i18n Support - JSON data
- * Based on sections (HTML semantic sections / categories), keys,
+ * 
+ * Based on sections (HTML semantic sections and content),
  * and lang attribute (query string)
+ * 
+ * Structured JSON and flat JSON structure support
  * 
  * Author: Matej Lednár
  */
