@@ -2,7 +2,8 @@
 
 <?
 include_once './php/classes/I18nSupport.php';
-$app = new App("i18n/i18n.json");
+$app = new App();
+$app ->loadTranslation("i18n/i18n.json")
 ?>
 
 <html lang="en">

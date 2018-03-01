@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-Nov-2017, 23:46:02
+    Author     : Matej Lednár <PhDr.Matej Lednár, PhD.>
+*/
+
+.languages {
+    position : relative;
+    top : 8px;
+}
+
+.languages a:focus, 
+.languages a:hover {
+    text-decoration: none;
+}
+
+.languages .dropdown-toggle::after {
+    border : 0;
+}

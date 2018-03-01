@@ -1,64 +1,62 @@
 {
     "metadata" : {
 
-        "title" : [
+        "title" : 
             {
                 "en" : "PHP i18n support demo",
                 "sk" : "PHP i18n support demo",
                 "de" : "PHP i18n support demo"
             }
-        ]
     },
     "navigation" : {
 
-        "brand" : [
+        "brand" : 
             {
                 "en" : "PHP i18n support demo",
                 "sk" : "PHP i18n support demo",
                 "de" : "PHP i18n support demo"
             }
-        ],
-        "home" : [
+        ,
+        "home" : 
             {
                 "en" : "Home",
                 "sk" : "Domov",
                 "de" : "Home"
             }
-        ],
-        "about" : [
+        ,
+        "about" : 
             {
                 "en" : "About",
                 "sk" : "O stránke",
                 "de" : "Info"
             }
-        ],
-        "services" : [
+        ,
+        "services" : 
             {
                 "en" : "Services",
                 "sk" : "Služby",
                 "de" : "Service"
             }
-        ],
-        "en" : [
+        ,
+        "en" : 
             {
                 "en" : "EN",
                 "sk" : "EN",
                 "de" : "EN"
             }
-        ],
-        "sk" : [
+        ,
+        "sk" : 
             {
                 "en" : "SK",
                 "sk" : "SK",
                 "de" : "SK"
             }
-        ],
-        "de" : [
+        ,
+        "de" : 
             {
                 "en" : "DE",
                 "sk" : "DE",
                 "de" : "DE"
             }
-        ]
     }
 }

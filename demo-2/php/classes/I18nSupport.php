@@ -71,7 +71,6 @@ class App {
         $lang = $this->lang;
         $translation = $this->translation[$section];
         $translation = $translation[$key];
-        $translation = $translation[0];
         $translation = $translation[$lang];
         return $translation;
     }
