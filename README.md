@@ -52,8 +52,7 @@ Sample:
     "home" :  {
             "en" : "Home",
             "sk" : "Domov"
-        }
-    ,
+        },
     "about" : {
             "en" : "About",
             "sk" : "O stránke"
