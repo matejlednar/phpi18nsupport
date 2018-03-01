@@ -11,15 +11,17 @@ class App {
 
     private $translation = "";
     private $lang = "en";
-    private $translationPath = "translation/i18n.json";  
+    private $translationPath = "translation/i18n.json";
     private $languages = [
         'en',
         'sk',
         'de'];
 
-    function __construct() {
-
-        $this->loadTranslation($this->translationPath);
+    function __construct($url = "") {
+        if ($url == "") {
+            $url = $this->translationPath;
+        }
+        $this->loadTranslation($url);
         $this->getLanguage();
     }
 
@@ -49,8 +51,11 @@ class App {
     public function loadTranslation($path) {
 
         // Read JSON file
-        $json = file_get_contents($path);
-
+        if (file_exists($path)) {
+            $json = file_get_contents($path);
+        } else {
+            $json = "{}";
+        }
         //Decode JSON
         $this->translation = json_decode($json, true);
     }
@@ -77,33 +82,33 @@ class App {
      * @param String $section
      * @param String $key
      */
-    public function i18n($section, $key) {
+    public function showText($section, $key) {
 
         echo $this->getText($section, $key);
     }
 
     public function setDefaultLanguage($lang) {
-        
+
         $this->lang = $lang;
     }
 
     public function getDefaultLanguage() {
-        
+
         return $this->lang;
     }
 
     public function setSupportedLanguages($languages) {
-        
+
         $this->languages = $languages;
     }
 
     public function getSupportedLanguages() {
-        
+
         return $this->languages;
     }
 
     public function isSupported($lang) {
-        
+
         if (in_array($lang, $this->languages)) {
             return true;
         }

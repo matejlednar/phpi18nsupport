@@ -17,9 +17,11 @@ class App {
         'sk',
         'de'];
 
-    function __construct() {
-
-        $this->loadTranslation($this->translationPath);
+    function __construct($url = "") {
+        if ($url == "") {
+            $url = $this->translationPath;
+        }
+        $this->loadTranslation($url);
         $this->getLanguage();
     }
 
@@ -59,6 +61,7 @@ class App {
     }
 
     /**
+     * Returns translated text
      * 
      * @param String $section - section name for better JSON structure
      * @param String $key - key name for translated text
@@ -80,7 +83,7 @@ class App {
      * @param String $section
      * @param String $key
      */
-    public function i18n($section, $key) {
+    public function showText($section, $key) {
 
         echo $this->getText($section, $key);
     }
@@ -105,7 +108,7 @@ class App {
         return $this->languages;
     }
 
-    public function isSupportedLanguage($lang) {
+    public function isSupported($lang) {
 
         if (in_array($lang, $this->languages)) {
             return true;

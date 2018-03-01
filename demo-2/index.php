@@ -3,15 +3,16 @@
 <?
 include_once './php/classes/I18nSupport.php';
 $app = new App();
+$app ->loadTranslation("i18n/i18n.json")
 ?>
 
 <html lang="en">
     <head>
-        <title><? $app->i18n("metadata", "title"); ?></title>
+        <title><? $app->showText("metadata", "title"); ?></title>
         <meta charset="utf-8">
         <meta name="author" content="PhDr. Matej Lednár, PhD.">
-        <meta name="description" content="PhDr.Matej Lednár, PhD. - PHP i18n support demo - my Bootstrap template">
-        <meta name="keywords" content="matej, lednár, bootstrap, template, php, i18n">
+        <meta name="description" content="PhDr.Matej Lednár, PhD. - PHP showText support demo - my Bootstrap template">
+        <meta name="keywords" content="matej, lednár, bootstrap, template, php, showText">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="css/styles.css">
@@ -27,17 +28,17 @@ $app = new App();
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="#"><? $app->i18n("navigation", "brand"); ?></a>
+                <a class="navbar-brand" href="#"><? $app->showText("navigation", "brand"); ?></a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#"><? $app->i18n("navigation", "home"); ?> <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#"><? $app->showText("navigation", "home"); ?> <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><? $app->i18n("navigation", "about"); ?></a>
+                            <a class="nav-link" href="#"><? $app->showText("navigation", "about"); ?></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><? $app->i18n("navigation", "services"); ?></a>
+                            <a class="nav-link" href="#"><? $app->showText("navigation", "services"); ?></a>
                         </li>
                         <li class="nav-item languages">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -46,17 +47,17 @@ $app = new App();
                             <ul class="dropdown-menu dropdown-menu-right">
                                 <li>
                                     <a href="?lang=en">
-                                        <? $app->i18n("navigation", "en"); ?>
+                                        <? $app->showText("navigation", "en"); ?>
                                     </a>
                                 </li>    
                                 <li>
                                     <a href="?lang=de">
-                                        <? $app->i18n("navigation", "de"); ?>
+                                        <? $app->showText("navigation", "de"); ?>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="?lang=sk">
-                                        <? $app->i18n("navigation", "sk"); ?>
+                                        <? $app->showText("navigation", "sk"); ?>
                                     </a>
                                 </li>
                             </ul>

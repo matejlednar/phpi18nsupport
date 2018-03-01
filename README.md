@@ -11,7 +11,11 @@ include_once './php/classes/I18nSupport.php';
 $app = new App();
 
 // show translated text
-$app->i18n("sectionName", "keyName");
+$app->showText("sectionName", "keyName");
+
+// returns translated text
+$app->getText("sectionName", "keyName");
+
 
 ?>
 ```
