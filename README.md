@@ -15,7 +15,7 @@ $app = new App($pathToTranslation);
 
 // set own path to translation file
 $app = new App();
-$app ->loadTranslation("i18n/i18n.json")
+$app ->loadTranslation("i18n/i18n.json");
 
 
 
@@ -30,28 +30,43 @@ $app->getText("sectionName", "keyName");
 
 ?>
 ```
-JSON file with translation
+JSON file with structured translation - section / content
 
 Sample:
 ```
 {
     "navigation" : {
 
-        "home" : [
-            {
+        "home" :  {
                 "en" : "Home",
                 "sk" : "Domov"
-            }
-        ],
-        "about" : [
-            {
+            },
+        "about" : {
                 "en" : "About",
                 "sk" : "O stránke"
-            }
-        ]
+            }        
     }
 }
 ``` 
+
+JSON file with flat translation structure - content
+
+Sample:
+```
+{
+    "home" :  {
+            "en" : "Home",
+            "sk" : "Domov"
+        }
+    ,
+    "about" : {
+            "en" : "About",
+            "sk" : "O stránke"
+        }
+}
+``` 
+
+
 
 ## Language detection
 
@@ -68,4 +83,5 @@ getDefaultLanguage();
 setSupportedLanguages([$languages]);
 getSupportedLanguages();
 isSupported($lang);
+loadTranslation($pathToTranslationFile);
 ```

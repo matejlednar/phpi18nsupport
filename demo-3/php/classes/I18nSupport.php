@@ -66,12 +66,18 @@ class App {
      * @param String $key - key name for translated text
      * @return String
      */
-    public function getText($section, $key) {
+    public function getText($section = "", $key = "") {
 
         $lang = $this->lang;
-        $translation = $this->translation[$section];
-        $translation = $translation[$key];
-        $translation = $translation[$lang];
+        if ($key != "") {
+            $translation = $this->translation[$section];
+            $translation = $translation[$key];
+            $translation = $translation[$lang];
+        } else {
+            $key = $section;
+            $translation = $this->translation[$key];
+            $translation = $translation[$lang];
+        }
         return $translation;
     }
 
@@ -81,7 +87,7 @@ class App {
      * @param String $section
      * @param String $key
      */
-    public function showText($section, $key) {
+    public function showText($section = "", $key = "") {
 
         echo $this->getText($section, $key);
     }

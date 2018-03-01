@@ -1,0 +1,57 @@
+{
+    "title" : 
+        {
+            "en" : "PHP i18n support demo - flat structure",
+            "sk" : "PHP i18n support demo - flat structure",
+            "de" : "PHP i18n support demo - flat structure"
+        },
+
+    "brand" : 
+        {
+            "en" : "PHP i18n support demo",
+            "sk" : "PHP i18n support demo",
+            "de" : "PHP i18n support demo"
+        },
+
+    "home" : 
+        {
+            "en" : "Home",
+            "sk" : "Domov",
+            "de" : "Home"
+        }
+    ,
+    "about" : 
+        {
+            "en" : "About",
+            "sk" : "O stránke",
+            "de" : "Info"
+        }
+    ,
+    "services" : 
+        {
+            "en" : "Services",
+            "sk" : "Služby",
+            "de" : "Service"
+        }
+    ,
+    "en" : 
+        {
+            "en" : "EN",
+            "sk" : "EN",
+            "de" : "EN"
+        }
+    ,
+    "sk" : 
+        {
+            "en" : "SK",
+            "sk" : "SK",
+            "de" : "SK"
+        }
+    ,
+    "de" : 
+        {
+            "en" : "DE",
+            "sk" : "DE",
+            "de" : "DE"
+        }
+}
