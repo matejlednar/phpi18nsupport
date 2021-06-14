@@ -1,7 +1,9 @@
 # PHP i18n Support
-i18n support for PHP based on JSON
-If the translation keyword doesn't exist, returns an empty string.
-PHP i18n util supports categories - e.g. menu and under the menu keyword, you can create a group of translation keywords.
+i18n support for PHP based on JSON. <br>
+
+If the translation keyword doesn't exist, returns an empty string.<br>
+The PHP i18n support util supports also categories (nested architecture based on parent-> child keywords). <br>
+e.g. you can create a group of translation keywords for the menu and under the menu keyword.
 
 ## Easy to use
 
@@ -27,7 +29,7 @@ $app->getText("sectionName", "keyName");
 
 ?>
 ```
-JSON file with structured translation - section / content
+JSON file with structured translation - section / content (nested)
 
 Sample:
 ```
@@ -46,7 +48,7 @@ Sample:
 }
 ``` 
 
-JSON file with flat translation structure - content
+JSON file with flat translation structure (simple) - content
 
 Sample:
 ```
