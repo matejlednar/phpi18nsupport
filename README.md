@@ -1,5 +1,5 @@
 # PHP i18n Support
-i18n support for PHP based on JSON. <br>
+i18n support for PHP based on JSON with unlimited languages support. <br>
 
 If the translation keyword doesn't exist, returns an empty string.<br>
 The PHP i18n support util supports also categories (nested architecture based on parent-> child keywords). <br>
@@ -7,29 +7,41 @@ e.g. you can create a group of translation keywords for the menu under the menu 
 
 ## Easy to use
 
-PHP file
+Load PHP i18n Support util
 ```
-<?
-
 include_once './php/classes/I18nSupport.php';
-$app = new App();
+$i18nUtil = new I18n();
 
 // set own path to translation file
-$app = new App($pathToTranslation);
-
-// set own path to translation file
-$app = new App();
-$app ->loadTranslation("i18n/i18n.json");
-
-// show translated text
-$app->showText("sectionName", "keyName");
-
-// returns translated text
-$app->getText("sectionName", "keyName");
-
-?>
+$i18nUtil = new I18n($pathToTranslation);
 ```
-JSON file with structured translation - section / content (nested)
+Example #1 - Nested JSON structure
+```
+// set own path to translation file
+$i18nUtil = new I18n();
+$i18nUtil ->loadTranslation("i18n/i18n.json");
+
+// show translated text from the nested JSON structure
+$i18nUtil->showText("sectionName", "keyName");
+
+// returns translated text from the nested JSON structure
+$i18nUtil->getText("sectionName", "keyName");
+```
+Example #2 - Flat JSON structure
+```
+// set own path to translation file
+$i18nUtil = new I18n();
+$i18nUtil ->loadTranslation("i18n/i18n.json");
+
+// show translated text from the flat JSON structure
+$i18nUtil->showText("keyName");
+
+// returns translated text from the flat JSON structure
+$i18nUtil->getText("keyName");
+
+
+```
+JSON file with the structured translation - section/keyword (nested JSON structure)
 
 Sample:
 ```
@@ -48,7 +60,7 @@ Sample:
 }
 ``` 
 
-JSON file with flat translation structure (simple) - content
+JSON file with the simple translation structure (flat JSON structure)
 
 Sample:
 ```
