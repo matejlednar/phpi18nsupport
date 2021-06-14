@@ -1,5 +1,7 @@
 # PHP i18n Support
 i18n support for PHP based on JSON
+If the translation keyword doesn't exist, returns an empty string.
+PHP i18n util supports categories - e.g. menu and under the menu keyword, you can create a group of translation keywords.
 
 ## Easy to use
 
@@ -77,4 +79,14 @@ setSupportedLanguages([$languages]);
 getSupportedLanguages();
 isSupported($lang);
 loadTranslation($pathToTranslationFile);
+```
+
+## Special Utils
+```
+showUText($key);
+showLText($key);
+showUFText($key);
+getUText($key);
+getLText($key);
+getUFText($key);
 ```
