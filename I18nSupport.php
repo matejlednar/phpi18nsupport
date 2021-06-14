@@ -10,7 +10,9 @@
  * 
  * Author: Matej Lednár
  */
-class App {
+mb_internal_encoding('UTF-8');
+
+class I18n {
 
     private $translation = "";
     private $lang = "en";
@@ -72,12 +74,28 @@ class App {
     public function getText($section = "", $key = "") {
 
         $lang = $this->lang;
+
         if ($key != "") {
+
+            $test = array_key_exists($section, $this->translation);
+
+            if (!$test) {
+                return ""; // if section doesn't exist, return empty string
+            }
+
             $translation = $this->translation[$section];
             $translation = $translation[$key];
             $translation = $translation[$lang];
         } else {
+
             $key = $section;
+
+            $test = array_key_exists($key, $this->translation);
+
+            if (!$test) {
+                return ""; // if key doesn't exist, return empty string
+            }
+
             $translation = $this->translation[$key];
             $translation = $translation[$lang];
         }
@@ -93,6 +111,72 @@ class App {
     public function showText($section = "", $key = "") {
 
         echo $this->getText($section, $key);
+    }
+
+    /**
+     * Show translated uppercase text (key) from defined category (section)
+     * 
+     * @param String $section
+     * @param String $key
+     */
+    public function showUText($section = "", $key = "") {
+
+        echo mb_strtoupper($this->getText($section, $key));
+    }
+
+    /**
+     * Show translated lowercase text (key) from defined category (section)
+     * 
+     * @param String $section
+     * @param String $key
+     */
+    public function showLText($section = "", $key = "") {
+
+        echo mb_strtolower($this->getText($section, $key));
+    }
+
+    /**
+     * Show translated first character uppercase text (key) from defined category (section)
+     * 
+     * @param String $section
+     * @param String $key
+     */
+    public function showUFText($section = "", $key = "") {
+
+        echo ucfirst($this->getText($section, $key));
+    }
+
+    /**
+     * Get translated uppercase text (key) from defined category (section)
+     * 
+     * @param String $section
+     * @param String $key
+     */
+    public function getUText($section = "", $key = "") {
+
+        return mb_strtoupper($this->getText($section, $key));
+    }
+
+    /**
+     * Get translated lowercase text (key) from defined category (section)
+     * 
+     * @param String $section
+     * @param String $key
+     */
+    public function getLText($section = "", $key = "") {
+
+        return mb_strtolower($this->getText($section, $key));
+    }
+
+    /**
+     * Get translated first character uppercase text (key) from defined category (section)
+     * 
+     * @param String $section
+     * @param String $key
+     */
+    public function getUFText($section = "", $key = "") {
+
+        return ucfirst($this->getText($section, $key));
     }
 
     public function setDefaultLanguage($lang) {
